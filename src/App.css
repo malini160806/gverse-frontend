@@ -1,20 +1,25 @@
 /* =========================
    GLOBAL BACKGROUND
 ========================= */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
 
 .app-wrapper {
   min-height: 100vh;
-  background-image: url("/src/assets/bg.jpg"); /* remove if using inline style */
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 15px;
+  padding: 40px 20px;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .background-overlay {
@@ -41,6 +46,29 @@
 .card-container {
   width: 100%;
   max-width: 520px;
+  transition: all 0.3s ease;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .card-container {
+    max-width: 95%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .card-container {
+    max-width: 100%;
+  }
+
+  .premium-card {
+    padding: 25px !important;
+  }
+
+  .portal-title {
+    font-size: 20px !important;
+  }
 }
 
 .premium-card {
