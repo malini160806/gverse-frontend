@@ -1,0 +1,411 @@
+/* =========================
+   GLOBAL BACKGROUND
+========================= */
+
+.app-wrapper {
+  min-height: 100vh;
+  background-image: url("/src/assets/bg.jpg"); /* remove if using inline style */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(6px);
+}
+
+.background-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(102,126,234,0.4) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  filter: blur(80px);
+}
+
+/* =========================
+   CARD DESIGN
+========================= */
+
+.card-container {
+  width: 100%;
+  max-width: 520px;
+}
+
+.premium-card {
+  border-radius: 18px !important;
+  padding: 32px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header-section {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.portal-title {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.portal-subtitle {
+  color: #d1d5db;
+  font-size: 14px;
+}
+
+/* =========================
+   FORM FIELDS
+========================= */
+
+.ant-input,
+.ant-select-selector,
+.ant-input-textarea {
+  border-radius: 8px !important;
+  background: rgba(255,255,255,0.1) !important;
+  color: white !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+.ant-input::placeholder,
+textarea::placeholder {
+  color: #cbd5e1 !important;
+}
+
+.ant-select-selection-placeholder {
+  color: #cbd5e1 !important;
+}
+
+.ant-form-item {
+  margin-bottom: 18px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn {
+  height: 44px;
+  border-radius: 8px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.secondary-btn {
+  margin-top: 14px;
+  height: 44px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 198, 255, 0.5);
+}
+
+/* =========================
+   TABS
+========================= */
+
+.custom-tabs .ant-tabs-tab {
+  font-weight: 500;
+  color: #d1d5db;
+}
+
+.custom-tabs .ant-tabs-tab-active {
+  color: white !important;
+}
+
+.custom-tabs .ant-tabs-ink-bar {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 3px;
+  border-radius: 3px;
+}
+
+/* =========================
+   CLEAN DARK INPUT STYLE
+========================= */
+
+.ant-input-affix-wrapper,
+.ant-select-selector,
+.ant-input,
+.ant-input-textarea {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 10px !important;
+  color: #ffffff !important;
+  transition: all 0.25s ease;
+}
+
+/* Remove nested background */
+.ant-input-affix-wrapper .ant-input {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Focus effect */
+.ant-input-affix-wrapper-focused,
+.ant-select-focused .ant-select-selector,
+.ant-input:focus {
+  border-color: #7f5af0 !important;
+  box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.25) !important;
+}
+
+/* Placeholder */
+.ant-input::placeholder,
+textarea::placeholder,
+.ant-select-selection-placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Disabled field */
+.static-field {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 10px !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Remove extra height conflicts */
+.ant-input,
+.ant-input-affix-wrapper {
+  height: 44px !important;
+}
+
+.ant-select-dropdown {
+  background: #2c3e50 !important;
+  border-radius: 10px !important;
+  padding: 6px !important;
+}
+
+.ant-select-item {
+  color: #ffffff !important;
+  border-radius: 6px !important;
+}
+
+.ant-select-item-option-active {
+  background: rgba(127, 90, 240, 0.2) !important;
+}
+
+.ant-select-item-option-selected {
+  background: rgba(127, 90, 240, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.primary-btn {
+  color: white !important;
+  font-weight: 500;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.app-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #1e293b, #334155);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  position: relative;
+}
+
+.background-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
+  top: -200px;
+  right: -200px;
+  filter: blur(120px);
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card-container {
+  width: 100%;
+  max-width: 520px;
+}
+
+.premium-card {
+  border-radius: 16px !important;
+  padding: 35px !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header-section {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.portal-title {
+  color: #ffffff !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.portal-subtitle {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+/* =========================
+   FORM FIELDS
+========================= */
+
+.ant-form-item {
+  margin-bottom: 18px;
+}
+
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-select-selector,
+.ant-input-textarea {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 10px !important;
+  color: #ffffff !important;
+  height: 44px;
+  transition: all 0.25s ease;
+}
+
+.ant-input-affix-wrapper .ant-input {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.ant-input:focus,
+.ant-input-affix-wrapper-focused,
+.ant-select-focused .ant-select-selector {
+  border-color: #7c3aed !important;
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.25) !important;
+}
+
+.ant-input::placeholder,
+textarea::placeholder,
+.ant-select-selection-placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.static-field {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  border-radius: 10px !important;
+}
+
+/* =========================
+   SELECT DROPDOWN FIX
+========================= */
+
+.ant-select-dropdown {
+  background: #1e293b !important;
+  border-radius: 10px !important;
+}
+
+.ant-select-item {
+  color: #ffffff !important;
+}
+
+.ant-select-item-option-active {
+  background: rgba(124, 58, 237, 0.2) !important;
+}
+
+.ant-select-item-option-selected {
+  background: rgba(124, 58, 237, 0.3) !important;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn {
+  height: 44px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: white !important;
+  background: linear-gradient(135deg, #6366f1, #7c3aed);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+}
+
+.secondary-btn {
+  margin-top: 14px;
+  height: 44px;
+  border-radius: 10px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5);
+}
+
+/* =========================
+   TABS
+========================= */
+
+.custom-tabs .ant-tabs-tab {
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.custom-tabs .ant-tabs-tab-active {
+  color: #ffffff !important;
+}
+
+.custom-tabs .ant-tabs-ink-bar {
+  background: linear-gradient(90deg, #6366f1, #7c3aed);
+  height: 3px;
+  border-radius: 3px;
+}
