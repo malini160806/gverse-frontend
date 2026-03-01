@@ -195,19 +195,7 @@ const App = () => {
         />
       </Form.Item>
 
-      <Form.Item
-        name="feedback"
-        label="Feedback"
-        rules={[{ required: true, message: "Please provide your feedback" }]}
-      >
-        <Input.TextArea
-          rows={4}
-          placeholder="Feedback"
-          maxLength={300}
-          showCount
-          style={{ borderRadius: 12, resize: "none" }}
-        />
-      </Form.Item>
+      
 
       <Button
         htmlType="submit"
